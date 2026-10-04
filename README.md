@@ -21,6 +21,17 @@ I craft intuitive, privacy-focused native Android applications, offline utility 
 
 ---
 
+## 🌐 Live Web Applications (Instant Browser Access)
+
+All web applications are deployed live via **GitHub Pages** with offline caching (PWA). You can run them directly in your web browser right now without downloading or installing any APK:
+
+* 📖 **[StoryLingo Web App](https://ahmadhibban.github.io/StoryLingo/)** — 1,000 bilingual stories with line-by-line Bengali translations
+* 📚 **[Hibban-Ul-Lughat Web App](https://ahmadhibban.github.io/Hibban-Ul-Lughat/)** — 32,000 Urdu-to-Bengali comprehensive dictionary
+* 📿 **[Misbahatu Ahmad Web App](https://ahmadhibban.github.io/Misbahatu-Ahmad/)** — Digital 3D Aqua Tasbih & Daily Islamic Azkar / Dua with TTS
+* 🎧 **[8D Audio Player Web App](https://ahmadhibban.github.io/8D-Audio/)** — Spatial 8D music player with continuous background playback
+
+---
+
 ## 🛠️ Tech Stack & Skills
 
 - **Mobile Development**: Android SDK, Kotlin, Jetpack Compose, Material Design 3, Gradle, WebView Bridges
