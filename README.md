@@ -13,7 +13,9 @@ I craft intuitive, privacy-focused native Android applications, offline utility 
 | Project | Description | Tech Stack | Links |
 | :--- | :--- | :--- | :--- |
 | **[My Salah Tracker](https://github.com/ahmadhibban/My-Salah-Tracker)** | Modern daily prayer tracker with interactive prayer times, calendar analytics, and an Ultra Neumorphic Tasbih. | Kotlin, Jetpack Compose, Material 3 | [Repo](https://github.com/ahmadhibban/My-Salah-Tracker) • [Releases](https://github.com/ahmadhibban/My-Salah-Tracker/releases) |
+| **[My Salah Tracker 2.0](https://github.com/ahmadhibban/My-Salah-Tracker-2.0)** | Web & PWA prayer tracking platform featuring a 3D Neumorphic dashboard, dynamic prayer logging, and offline sync. | JavaScript, Alpine.js, PWA | [Repo](https://github.com/ahmadhibban/My-Salah-Tracker-2.0) • [Live App](https://ahmadhibban.github.io/My-Salah-Tracker-2.0/) |
 | **[PDFLNX](https://github.com/ahmadhibban/PDFLNX)** | High-performance offline PDF document processing & multi-language OCR (Bengali, Arabic, English, Urdu) text extractor. | Kotlin, Android SDK, Tesseract OCR | [Repo](https://github.com/ahmadhibban/PDFLNX) • [Releases](https://github.com/ahmadhibban/PDFLNX/releases) |
+| **[PDF Scrapper](https://github.com/ahmadhibban/PDF-Scrapper)** | Automated PDF book crawler & downloader with cloud storage resolution, header verification, and offline vector icons. | Java, Android SDK, Tailwind CSS | [Repo](https://github.com/ahmadhibban/PDF-Scrapper) • [Releases](https://github.com/ahmadhibban/PDF-Scrapper/releases) |
 | **[StoryLingo](https://github.com/ahmadhibban/StoryLingo)** | Bilingual language learning platform featuring 1,000 curated stories across 57 categories with sentence-by-sentence translations. | JavaScript, PWA, Tailwind CSS | [Repo](https://github.com/ahmadhibban/StoryLingo) • [Live App](https://ahmadhibban.github.io/StoryLingo/) |
 | **[Hibban-Ul-Lughat](https://github.com/ahmadhibban/Hibban-Ul-Lughat)** | Comprehensive offline Urdu-to-Bengali digital dictionary with 32,000 standard entries, Nastaliq typography, and instant search. | PWA, SQLite, Tailwind CSS | [Repo](https://github.com/ahmadhibban/Hibban-Ul-Lughat) • [Live App](https://ahmadhibban.github.io/Hibban-Ul-Lughat/) |
 | **[Misbahatu Ahmad](https://github.com/ahmadhibban/Misbahatu-Ahmad)** | Digital 3D Aqua Tasbih, Dhikr, and Daily Dua recitation application with Text-to-Speech (TTS) voice assistance. | JavaScript, Android WebView, PWA | [Repo](https://github.com/ahmadhibban/Misbahatu-Ahmad) • [Live App](https://ahmadhibban.github.io/Misbahatu-Ahmad/) |
@@ -25,6 +27,7 @@ I craft intuitive, privacy-focused native Android applications, offline utility 
 
 All web applications are deployed live via **GitHub Pages** with offline caching (PWA). You can run them directly in your web browser right now without downloading or installing any APK:
 
+* 🕌 **[My Salah Tracker 2.0 Web App](https://ahmadhibban.github.io/My-Salah-Tracker-2.0/)** — Interactive 3D Neumorphic daily prayer dashboard
 * 📖 **[StoryLingo Web App](https://ahmadhibban.github.io/StoryLingo/)** — 1,000 bilingual stories with line-by-line Bengali translations
 * 📚 **[Hibban-Ul-Lughat Web App](https://ahmadhibban.github.io/Hibban-Ul-Lughat/)** — 32,000 Urdu-to-Bengali comprehensive dictionary
 * 📿 **[Misbahatu Ahmad Web App](https://ahmadhibban.github.io/Misbahatu-Ahmad/)** — Digital 3D Aqua Tasbih & Daily Islamic Azkar / Dua with TTS
@@ -34,9 +37,9 @@ All web applications are deployed live via **GitHub Pages** with offline caching
 
 ## 🛠️ Tech Stack & Skills
 
-- **Mobile Development**: Android SDK, Kotlin, Jetpack Compose, Material Design 3, Gradle, WebView Bridges
+- **Mobile Development**: Android SDK, Kotlin, Java, Jetpack Compose, Material Design 3, Gradle, WebView Bridges
 - **Web Technologies**: Modern JavaScript (ES6+), HTML5, CSS3, Tailwind CSS, Alpine.js, Progressive Web Apps (PWA)
-- **Engines & Libraries**: Tesseract OCR Engine, SQLite, Service Workers, Audio Streaming APIs
+- **Engines & Libraries**: Tesseract OCR Engine, SQLite, Service Workers, Audio Streaming APIs, Web Crawlers
 - **DevOps & Workflows**: Git, GitHub Actions (CI/CD Automated Builds), GitHub Pages, Linux / Bash
 
 ---
