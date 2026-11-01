@@ -1,0 +1,1136 @@
+<!DOCTYPE html>
+<html lang="ur">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>حبان اللغات</title>
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#7A0214">
+    <link rel="icon" type="image/png" href="1782975618016.png">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Aref+Ruqaa:wght@700&family=Noto+Nastaliq+Urdu:wght@400;600;700&family=Hind+Siliguri:wght@400;600;700&display=swap');
+        
+        :root {
+            --primary: #7A0214;
+            --primary-shadow: rgba(122, 2, 20, 0.15);
+            --bg-page: #FCF8F5;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
+        body { 
+            font-family: 'Hind Siliguri', sans-serif; 
+            overflow-x: hidden; 
+            background: var(--bg-page); 
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        .hide-scroll::-webkit-scrollbar { display: none; }
+        .hide-scroll { -ms-overflow-style: none; scrollbar-width: none; }
+        
+        .ur-font { font-family: 'Noto Nastaliq Urdu', 'Scheherazade New', serif; }
+        .font-aref { font-family: 'Aref Ruqaa', serif; }
+        
+        /* Crimson Theme */
+        .bg-primary { background-color: var(--primary) !important; }
+        .text-primary { color: var(--primary) !important; }
+        
+        /* Original Header Height and Style */
+        .header-box {
+            background-color: var(--primary);
+            color: #ffffff;
+            padding-top: 32px;
+            padding-bottom: 56px;
+            text-align: center;
+            border-bottom-left-radius: 32px;
+            border-bottom-right-radius: 32px;
+            box-shadow: 0 4px 10px var(--primary-shadow);
+            position: relative;
+            z-index: 10;
+        }
+        .header-title {
+            font-family: 'Aref Ruqaa', serif;
+            font-size: 46px;
+            font-weight: 700;
+            line-height: 1;
+            margin-top: 8px;
+        }
+        
+        /* Original Main Container with -mt-8 */
+        .main-wrap {
+            width: 100%;
+            max-width: 450px;
+            margin: -32px auto 0;
+            padding: 0 20px 32px;
+            position: relative;
+            z-index: 30;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .search-bar-wrap {
+            background: #ffffff;
+            border-radius: 9999px;
+            padding: 6px 16px;
+            display: flex;
+            align-items: center;
+            box-shadow: 0 10px 25px -5px rgba(122, 2, 20, 0.12), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            border: 1px solid #f3f4f6;
+            min-height: 56px;
+        }
+        
+        .search-btn {
+            color: var(--primary);
+            padding: 8px;
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            outline: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            align-self: center;
+            transition: transform 0.15s;
+        }
+        .search-btn:active { transform: scale(0.9); }
+        .search-btn svg { display: block; }
+        
+        .search-input {
+            flex: 1;
+            width: 100%;
+            outline: none;
+            font-family: 'Noto Nastaliq Urdu', serif;
+            font-size: 21px;
+            padding: 3px 10px;
+            color: #1f2937;
+            background: transparent;
+            white-space: nowrap;
+            overflow-x: auto;
+            line-height: 2.2;
+            direction: rtl;
+            border: none;
+            align-self: center;
+        }
+        .search-input:empty::before {
+            content: attr(data-placeholder);
+            color: #9ca3af;
+        }
+        
+        .clear-btn {
+            background: transparent;
+            border: none;
+            color: #9ca3af;
+            cursor: pointer;
+            padding: 8px;
+            display: none;
+            outline: none;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            align-self: center;
+            border-radius: 9999px;
+            transition: transform 0.15s;
+        }
+        .clear-btn.active { display: flex !important; }
+        .clear-btn:active { transform: scale(0.9); }
+        .clear-btn svg { display: block; }
+        
+        /* Alphabet Ribbon */
+        .alpha-ribbon {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            overflow-x: auto;
+            padding: 14px 2px 8px;
+            direction: rtl;
+            min-height: 52px;
+            box-sizing: border-box;
+            scrollbar-width: none;
+            -ms-overflow-style: none;
+        }
+
+        .alpha-chip {
+            padding: 4px 11px;
+            border-radius: 8px;
+            font-size: 15px;
+            font-family: 'Noto Nastaliq Urdu', serif;
+            cursor: pointer;
+            flex-shrink: 0;
+            background: #ffffff;
+            color: #4b5563;
+            border: 1px solid #e5e7eb;
+            outline: none;
+            transition: all 0.15s;
+        }
+        .alpha-chip.active {
+            background: var(--primary);
+            color: #ffffff;
+            border-color: var(--primary);
+            font-weight: bold;
+        }
+        
+        /* Tabs */
+        .tabs-wrap {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin: 8px 0 14px;
+            direction: rtl;
+            min-height: 36px;
+        }
+        .tabs-list {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            flex-shrink: 0;
+        }
+        .tab-btn {
+            padding: 4px 11px;
+            border-radius: 9999px;
+            font-size: 13px;
+            font-family: 'Noto Nastaliq Urdu', serif;
+            font-weight: bold;
+            cursor: pointer;
+            border: 1px solid #e5e7eb;
+            background: #ffffff;
+            color: #6b7280;
+            outline: none;
+            transition: all 0.2s;
+            white-space: nowrap;
+            height: 32px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .tab-btn.active {
+            background: var(--primary);
+            color: #ffffff;
+            border-color: var(--primary);
+            box-shadow: 0 2px 6px rgba(122, 2, 20, 0.2);
+        }
+        .section-count {
+            font-family: system-ui, -apple-system, sans-serif;
+            font-size: 14px;
+            font-weight: 600;
+            color: #6b7280;
+            display: inline-flex;
+            align-items: center;
+            height: 32px;
+            align-self: center;
+        }
+        
+        /* Unified Card Style Across All Views */
+        .card-box {
+            background: #ffffff;
+            border-radius: 12px;
+            padding: 8px 12px;
+            margin-bottom: 10px;
+            border: 1px solid #f3f4f6;
+            border-left: 3px solid var(--primary);
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+            position: relative;
+        }
+        .card-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 10px;
+            padding: 3px 0;
+        }
+        .card-bn {
+            flex: 1;
+            min-width: 0;
+            font-weight: 600;
+            color: #1f2937;
+            font-size: 16px;
+            text-align: left;
+            line-height: 1.45;
+            word-break: break-word;
+            direction: ltr;
+        }
+        .card-ur-area {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            gap: 8px;
+            flex-shrink: 0;
+        }
+        .card-actions {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            flex-shrink: 0;
+        }
+        .action-btn {
+            padding: 5px;
+            background: #f9fafb;
+            border: 1px solid #e5e7eb;
+            border-radius: 9999px;
+            cursor: pointer;
+            outline: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.1s;
+        }
+        .action-btn:active { transform: scale(0.9); }
+        
+        /* Balanced Uniform Font Size & Single-Line Layout for Urdu */
+        .card-ur {
+            font-family: 'Noto Nastaliq Urdu', 'Scheherazade New', serif;
+            font-size: 19.5px !important;
+            font-weight: 700;
+            color: #111827;
+            text-align: right;
+            line-height: 1.6;
+            direction: rtl;
+            white-space: nowrap;
+        }
+        .card-pos {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Noto Nastaliq Urdu', 'Scheherazade New', serif;
+            font-size: 11.5px;
+            font-weight: 600;
+            color: var(--primary);
+            background: rgba(122, 2, 20, 0.07);
+            border: 1.2px solid rgba(122, 2, 20, 0.22);
+            padding: 6px 11px 3px;
+            min-height: 30px;
+            border-radius: 9999px;
+            line-height: 1.85;
+            direction: rtl;
+            white-space: nowrap;
+            flex-shrink: 0;
+        }
+        .card-pos.pos-m {
+            color: #1d4ed8;
+            background: #eff6ff;
+            border-color: #93c5fd;
+        }
+        .card-pos.pos-f {
+            color: #be185d;
+            background: #fdf2f8;
+            border-color: #f9a8d4;
+        }
+        .card-pos.pos-mf {
+            color: #6d28d9;
+            background: #f5f3ff;
+            border-color: #c4b5fd;
+        }
+        .card-pos.pos-adj {
+            color: #047857;
+            background: #ecfdf5;
+            border-color: #6ee7b7;
+        }
+        .card-pos.pos-verb {
+            color: #b45309;
+            background: #fffbeb;
+            border-color: #fcd34d;
+        }
+        .card-pos.pos-adv {
+            color: #0f766e;
+            background: #f0fdfa;
+            border-color: #5eead4;
+        }
+        .card-pos.pos-pron {
+            color: #4338ca;
+            background: #eef2ff;
+            border-color: #a5b4fc;
+        }
+        .card-pos.pos-harf {
+            color: #9a3412;
+            background: #fff7ed;
+            border-color: #fdba74;
+        }
+
+        /* Singular (واحد) / Plural (جمع) Badge */
+        .card-wj {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Noto Nastaliq Urdu', 'Scheherazade New', serif;
+            font-size: 11.5px;
+            font-weight: 600;
+            padding: 6px 11px 3px;
+            min-height: 30px;
+            border-radius: 9999px;
+            line-height: 1.85;
+            direction: rtl;
+            white-space: nowrap;
+            flex-shrink: 0;
+        }
+        .card-wj.wj-wahid {
+            color: #b45309;
+            background: #fffbeb;
+            border: 1.2px solid #fde68a;
+        }
+        .card-wj.wj-jama {
+            color: #0f766e;
+            background: #f0fdfa;
+            border: 1.2px solid #99f6e4;
+        }
+        
+        /* Swipe Actions */
+        .swipe-container {
+            position: relative;
+            overflow: hidden;
+            background-color: var(--primary);
+            border-radius: 12px;
+            margin-bottom: 10px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+        }
+        .swipe-delete-label {
+            position: absolute;
+            inset: 0;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            padding-left: 20px;
+            color: #ffffff;
+            font-family: 'Noto Nastaliq Urdu', serif;
+            font-size: 20px;
+        }
+        .swipe-card-content {
+            background: #ffffff;
+            border-radius: 12px;
+            padding: 8px 12px;
+            border: 1px solid #f3f4f6;
+            border-left: 3px solid var(--primary);
+            position: relative;
+            z-index: 10;
+            transition: transform 0.25s ease;
+        }
+        
+        .empty-state {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #9ca3af;
+            font-family: 'Noto Nastaliq Urdu', serif;
+            font-size: 18px;
+            padding: 60px 0;
+            direction: rtl;
+        }
+        
+        .load-more-btn {
+            background: #ffffff;
+            border: 1px solid #e5e7eb;
+            color: var(--primary);
+            font-family: 'Noto Nastaliq Urdu', serif;
+            font-size: 15px;
+            padding: 8px 16px;
+            border-radius: 9999px;
+            cursor: pointer;
+            margin: 12px auto;
+            display: block;
+            outline: none;
+            box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+        }
+
+        .anim { animation: fade 0.35s ease-out forwards; }
+        @keyframes fade { 
+            from { opacity: 0; transform: translateY(12px); } 
+            to { opacity: 1; transform: translateY(0); } 
+        }
+        
+        #toast {
+            position: fixed;
+            bottom: 32px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #1f2937;
+            color: #ffffff;
+            padding: 8px 20px;
+            border-radius: 9999px;
+            font-family: 'Noto Nastaliq Urdu', serif;
+            font-size: 14px;
+            z-index: 999;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            white-space: nowrap;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header: Original Size with NO word count next to title -->
+    <header class="header-box">
+        <h1 class="header-title">حبان اللغات</h1>
+    </header>
+
+    <div class="main-wrap">
+        
+        <!-- Search Bar with Search Icon on Left -->
+        <div class="search-bar-wrap">
+            <button onclick="performSearch()" class="search-btn" aria-label="Search">
+                <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.603 10.601Z" />
+                </svg>
+            </button>
+            <div id="urduInput" dir="rtl" class="search-input hide-scroll" contenteditable="true" data-placeholder="اردو الفاظ تلاش کریں"></div>
+            <button id="clearBtn" onclick="clearSearch()" class="clear-btn" aria-label="Clear"><svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke-width="2.2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" /></svg></button>
+        </div>
+
+        <!-- Alphabet Ribbon (حروفِ تہجی) -->
+        <div id="alphaRibbon" class="alpha-ribbon hide-scroll">
+            <button onclick="selectAlpha('سب')" class="alpha-chip active">سب</button>
+            <button onclick="selectAlpha('آ')" class="alpha-chip">آ</button>
+            <button onclick="selectAlpha('ا')" class="alpha-chip">ا</button>
+            <button onclick="selectAlpha('ب')" class="alpha-chip">ب</button>
+            <button onclick="selectAlpha('پ')" class="alpha-chip">پ</button>
+            <button onclick="selectAlpha('ت')" class="alpha-chip">ت</button>
+            <button onclick="selectAlpha('ٹ')" class="alpha-chip">ٹ</button>
+            <button onclick="selectAlpha('ث')" class="alpha-chip">ث</button>
+            <button onclick="selectAlpha('ج')" class="alpha-chip">ج</button>
+            <button onclick="selectAlpha('چ')" class="alpha-chip">چ</button>
+            <button onclick="selectAlpha('ح')" class="alpha-chip">ح</button>
+            <button onclick="selectAlpha('خ')" class="alpha-chip">خ</button>
+            <button onclick="selectAlpha('د')" class="alpha-chip">د</button>
+            <button onclick="selectAlpha('ڈ')" class="alpha-chip">ڈ</button>
+            <button onclick="selectAlpha('ذ')" class="alpha-chip">ذ</button>
+            <button onclick="selectAlpha('ر')" class="alpha-chip">ر</button>
+            <button onclick="selectAlpha('ڑ')" class="alpha-chip">ڑ</button>
+            <button onclick="selectAlpha('ز')" class="alpha-chip">ز</button>
+            <button onclick="selectAlpha('ژ')" class="alpha-chip">ژ</button>
+            <button onclick="selectAlpha('س')" class="alpha-chip">س</button>
+            <button onclick="selectAlpha('ش')" class="alpha-chip">ش</button>
+            <button onclick="selectAlpha('ص')" class="alpha-chip">ص</button>
+            <button onclick="selectAlpha('ض')" class="alpha-chip">ض</button>
+            <button onclick="selectAlpha('ط')" class="alpha-chip">ط</button>
+            <button onclick="selectAlpha('ظ')" class="alpha-chip">ظ</button>
+            <button onclick="selectAlpha('ع')" class="alpha-chip">ع</button>
+            <button onclick="selectAlpha('غ')" class="alpha-chip">غ</button>
+            <button onclick="selectAlpha('ف')" class="alpha-chip">ف</button>
+            <button onclick="selectAlpha('ق')" class="alpha-chip">ق</button>
+            <button onclick="selectAlpha('ک')" class="alpha-chip">ک</button>
+            <button onclick="selectAlpha('گ')" class="alpha-chip">گ</button>
+            <button onclick="selectAlpha('ل')" class="alpha-chip">ل</button>
+            <button onclick="selectAlpha('م')" class="alpha-chip">م</button>
+            <button onclick="selectAlpha('ن')" class="alpha-chip">ن</button>
+            <button onclick="selectAlpha('و')" class="alpha-chip">و</button>
+            <button onclick="selectAlpha('ہ')" class="alpha-chip">ہ</button>
+            <button onclick="selectAlpha('ی')" class="alpha-chip">ی</button>
+        </div>
+
+        <!-- Navigation Tabs with English Number Counter -->
+        <div class="tabs-wrap">
+            <div class="tabs-list">
+                <button id="tabAll" onclick="setTab('all')" class="tab-btn active">تمام الفاظ</button>
+                <button id="tabHist" onclick="setTab('hist')" class="tab-btn">حالیہ تلاش</button>
+                <button id="tabFavs" onclick="setTab('favs')" class="tab-btn">پسندیدہ</button>
+            </div>
+            <!-- Word Count in English numbers e.g. 2,693 الفاظ -->
+            <div id="sectionCounter" class="section-count"></div>
+        </div>
+
+        <!-- Results Area -->
+        <div id="resultArea" style="flex: 1; display: flex; flex-direction: column;"></div>
+
+        <!-- Load More Button -->
+        <button id="loadMoreBtn" onclick="loadMore()" class="load-more-btn" style="display: none;">مزید دیکھیں...</button>
+    </div>
+
+    <!-- Toast Notification -->
+    <div id="toast"></div>
+
+    <script>
+        // DOM Elements
+        const $ = (id) => document.getElementById(id);
+        const inDiv = $('urduInput');
+        const resArea = $('resultArea');
+        const clearBtn = $('clearBtn');
+        const alphaRibbon = $('alphaRibbon');
+        const sectionCounter = $('sectionCounter');
+        const loadMoreBtn = $('loadMoreBtn');
+
+        const URDU_LETTERS = ['سب', 'آ', 'ا', 'ب', 'پ', 'ت', 'ٹ', 'ث', 'ج', 'چ', 'ح', 'خ', 'د', 'ڈ', 'ذ', 'ر', 'ڑ', 'ز', 'ژ', 'س', 'ش', 'ص', 'ض', 'ط', 'ظ', 'ع', 'غ', 'ف', 'ق', 'ک', 'گ', 'ل', 'م', 'ن', 'و', 'ہ', 'ی'];
+
+        // State
+        let hist = JSON.parse(localStorage.getItem('historyDictList')) || [];
+        let favs = JSON.parse(localStorage.getItem('favDictList')) || [];
+        let cur = null;
+        let activeTab = 'all';
+        let selectedAlpha = 'سب';
+        let displayLimit = 40;
+        let currentList = [];
+        let ALL_WORDS = [];
+        let DICT_MAP = {};
+        let POS_MAP = {};
+        let WJ_MAP = {};
+
+        function extractPosAndBn(bnStr, explicitPos, explicitWj) {
+            let b = typeof bnStr === 'string' ? bnStr.trim() : '';
+            let p = explicitPos || '';
+            let w = explicitWj || '';
+            if (b.charCodeAt(0) === 91) {
+                const closeIdx = b.indexOf(']');
+                if (closeIdx > 1 && closeIdx < 70) {
+                    let tagContent = b.substring(1, closeIdx).trim();
+                    b = b.substring(closeIdx + 1).trim();
+                    if (tagContent.indexOf('|') >= 0) {
+                        let parts = tagContent.split('|');
+                        if (!p) p = parts[0].trim();
+                        if (!w && parts.length > 1) w = parts[1].trim();
+                    } else {
+                        if (!p) p = tagContent;
+                    }
+                }
+            }
+            return { bn: b, pos: p, wj: w };
+        }
+
+        function rebuildDictMap() {
+            DICT_MAP = {};
+            POS_MAP = {};
+            WJ_MAP = {};
+            for (let i = 0; i < ALL_WORDS.length; i++) {
+                DICT_MAP[ALL_WORDS[i].ur] = ALL_WORDS[i].bn;
+                if (ALL_WORDS[i].pos) {
+                    POS_MAP[ALL_WORDS[i].ur] = ALL_WORDS[i].pos;
+                }
+                if (ALL_WORDS[i].wj) {
+                    WJ_MAP[ALL_WORDS[i].ur] = ALL_WORDS[i].wj;
+                }
+            }
+        }
+
+        function parseRawWords(raw) {
+            if (!raw) return null;
+            if (Array.isArray(raw)) {
+                if (raw.length === 0) return null;
+                return raw.map(r => {
+                    if (Array.isArray(r)) {
+                        const ext = extractPosAndBn(r[1], r[2], r[3]);
+                        return { ur: r[0], bn: ext.bn, pos: ext.pos, wj: ext.wj };
+                    }
+                    if (r.ur) {
+                        const ext = extractPosAndBn(r.bn, r.pos, r.wj);
+                        return { ur: r.ur, bn: ext.bn, pos: ext.pos, wj: ext.wj };
+                    }
+                    const ext = extractPosAndBn(r[1], r[2], r[3]);
+                    return { ur: r[0], bn: ext.bn, pos: ext.pos, wj: ext.wj };
+                });
+            }
+            if (typeof raw === 'object') {
+                const keys = Object.keys(raw);
+                if (keys.length === 0) return null;
+                return keys.map(k => {
+                    const ext = extractPosAndBn(raw[k], '', '');
+                    return { ur: k, bn: ext.bn, pos: ext.pos, wj: ext.wj };
+                });
+            }
+            return null;
+        }
+
+        function applyWordsData(raw) {
+            const parsed = parseRawWords(raw);
+            if (parsed && parsed.length > 0) {
+                ALL_WORDS = parsed;
+                rebuildDictMap();
+                if (activeTab === "all" && (!inDiv || !inDiv.innerText.trim())) {
+                    updateCounter(ALL_WORDS.length);
+                    render();
+                }
+                return true;
+            }
+            return false;
+        }
+
+        window.onWordsLoaded = function() {
+            applyWordsData(window.RAW_WORDS);
+        };
+
+        // Standard English Number Formatting (e.g. 2,693)
+        function formatEnglishNumber(num) {
+            return Number(num).toLocaleString('en-US');
+        }
+
+        // Update Counter with English number only (no Alfaz word)
+        function updateCounter(count) {
+            if (count === null || count === undefined) {
+                sectionCounter.innerText = '';
+                return;
+            }
+            sectionCounter.innerText = formatEnglishNumber(count);
+        }
+
+        // Normalize Urdu text (strips diacritics / aerab)
+        function normalizeUrdu(str) {
+            if (!str) return '';
+            return str
+                .replace(/[ً-ٰٟۖ-ۜ۟-۪ۨ-ۭ]/g, '')
+                .replace(/[‌​﻿]/g, '')
+                .replace(/ي/g, 'ی')
+                .replace(/ك/g, 'ک')
+                .replace(/ة/g, 'ہ')
+                .replace(/ۂ/g, 'ہ')
+                .replace(/ھ/g, 'ہ')
+                .trim();
+        }
+
+        function showToast(m) { 
+            let t = $("toast"); 
+            t.innerText = m; 
+            t.style.display = "block"; 
+            setTimeout(() => t.style.display = "none", 1800); 
+        }
+
+
+        function renderAlphaRibbon() {
+            const chips = alphaRibbon.querySelectorAll('.alpha-chip');
+            if (chips && chips.length === URDU_LETTERS.length) {
+                for (let i = 0; i < URDU_LETTERS.length; i++) {
+                    if (URDU_LETTERS[i] === selectedAlpha) {
+                        chips[i].classList.add('active');
+                    } else {
+                        chips[i].classList.remove('active');
+                    }
+                }
+            } else {
+                alphaRibbon.innerHTML = URDU_LETTERS.map(ch => `
+                    <button onclick="selectAlpha('${ch}')" class="alpha-chip ${selectedAlpha === ch ? 'active' : ''}">
+                        ${ch}
+                    </button>
+                `).join('');
+            }
+        }
+
+        function selectAlpha(ch) {
+            selectedAlpha = ch;
+            renderAlphaRibbon();
+            inDiv.innerText = '';
+            clearBtn.classList.remove('active');
+            activeTab = 'all';
+            updateTabButtons();
+            cur = null;
+            displayLimit = 40;
+            render();
+        }
+
+        function updateTabButtons() {
+            $('tabAll').className = 'tab-btn' + (activeTab === 'all' ? ' active' : '');
+            $('tabHist').className = 'tab-btn' + (activeTab === 'hist' ? ' active' : '');
+            $('tabFavs').className = 'tab-btn' + (activeTab === 'favs' ? ' active' : '');
+        }
+
+        function setTab(tab) {
+            activeTab = tab;
+            updateTabButtons();
+            inDiv.innerText = '';
+            clearBtn.classList.remove('active');
+            cur = null;
+            displayLimit = 40;
+            render();
+        }
+
+        function clearSearch() {
+            inDiv.innerText = '';
+            clearBtn.classList.remove('active');
+            cur = null;
+            activeTab = 'all';
+            updateTabButtons();
+            displayLimit = 40;
+            render();
+        }
+
+        // STRICT PREFIX ONLY SEARCH (Kaf only matches words starting with Kaf!)
+        function searchStrictPrefix(query) {
+            const nq = normalizeUrdu(query);
+            if (!nq) return [];
+            
+            // STRICT PREFIX CHECK ONLY: nu.startsWith(nq)
+            const matches = [];
+            for (let i = 0; i < ALL_WORDS.length; i++) {
+                const nu = normalizeUrdu(ALL_WORDS[i].ur);
+                if (nu.startsWith(nq)) {
+                    matches.push(ALL_WORDS[i]);
+                }
+            }
+
+            // Exact first, then shortest length
+            matches.sort((a, b) => {
+                const na = normalizeUrdu(a.ur);
+                const nb = normalizeUrdu(b.ur);
+                if (na === nq) return -1;
+                if (nb === nq) return 1;
+                return na.length - nb.length;
+            });
+
+            return matches;
+        }
+
+        inDiv.oninput = function() {
+            let original = this.innerText;
+            let cleaned = original.replace(/[^\u0600-\u06FF\s\u200C]/g, ''); 
+            
+            if (original !== cleaned) {
+                this.innerText = cleaned;
+                try {
+                    let range = document.createRange();
+                    let sel = window.getSelection();
+                    range.selectNodeContents(this);
+                    range.collapse(false);
+                    sel.removeAllRanges();
+                    sel.addRange(range);
+                } catch(err){}
+                showToast("صرف اردو");
+            }
+
+            let val = this.innerText.replace(/[\n\r\u200B]/g,'').trim();
+            if (val) {
+                clearBtn.classList.add('active');
+                cur = null;
+                activeTab = 'search';
+                updateTabButtons();
+                displayLimit = 40;
+                render();
+            } else {
+                clearBtn.classList.remove('active');
+                activeTab = 'all';
+                updateTabButtons();
+                render();
+            }
+        };
+
+        inDiv.onkeypress = (e) => { 
+            if (e.key === 'Enter') { 
+                e.preventDefault(); 
+                performSearch(); 
+            } 
+        };
+
+        function performSearch() {
+            let val = inDiv.innerText.replace(/[\n\r\u200B]/g,'').trim();
+            if (!val) return;
+
+            let wordCount = val.split(/\s+/).length;
+            if (wordCount > 1) {
+                showToast("صرف ایک لفظ");
+                return; 
+            }
+
+            const results = searchStrictPrefix(val);
+            if (results.length > 0) {
+                const best = results[0];
+                selectWord(best.ur, best.bn, best.pos);
+            } else {
+                showToast("معنی نہیں ملا");
+                resArea.innerHTML = `
+                    <div class="card-box anim" style="text-align: center; padding: 32px 16px; margin-top: 16px;">
+                        <div class="ur-font" style="font-size: 22px; font-weight: bold; color: #374151; margin-bottom: 4px;">معنی نہیں ملا</div>
+                        <p class="ur-font" style="color: #9ca3af; font-size: 14px;">یہ لفظ فی الحال لغت میں موجود نہیں ہے</p>
+                    </div>
+                `;
+                loadMoreBtn.style.display = 'none';
+            }
+        }
+
+        function selectWord(ur, bn, pos, wj) {
+            inDiv.innerText = ur;
+            clearBtn.classList.add('active');
+            const ext = extractPosAndBn(bn, pos || POS_MAP[ur] || '', wj || WJ_MAP[ur] || '');
+            cur = { ur, bn: ext.bn, pos: ext.pos, wj: ext.wj };
+            hist = [cur, ...hist.filter(h => h.ur !== ur)].slice(0, 50);
+            localStorage.setItem('historyDictList', JSON.stringify(hist));
+            render();
+        }
+
+        function toggleFav(u) { 
+            let itm = hist.find(h => h.ur === u) || (cur?.ur === u ? cur : favs.find(f => f.ur === u));
+            if (!itm) {
+                const f = ALL_WORDS.find(w => w.ur === u);
+                if (f) itm = { ur: f.ur, bn: f.bn, pos: f.pos, wj: f.wj };
+            } else {
+                if (!itm.pos && POS_MAP[u]) itm.pos = POS_MAP[u];
+                if (!itm.wj && WJ_MAP[u]) itm.wj = WJ_MAP[u];
+            }
+
+            if (favs.some(f => f.ur === u)) { 
+                favs = favs.filter(f => f.ur !== u); 
+                showToast("حذف"); 
+            } else if (itm) { 
+                favs.unshift(itm); 
+                showToast("محفوظ"); 
+            } 
+            localStorage.setItem('favDictList', JSON.stringify(favs)); 
+            render(); 
+        }
+
+        // Swipe handling for History / Fav
+        let tsX = 0;
+        function ts(e) { tsX = e.touches[0].clientX; }
+        function tm(e, el) { 
+            let d = tsX - e.touches[0].clientX; 
+            if (d < 0 && d > -100) el.style.transform = `translateX(${-d}px)`; 
+        }
+        function getItemByTypeAndIdx(ty, idx) {
+            if (ty === 'current') return cur;
+            if (ty === 'history') return hist[idx];
+            if (ty === 'fav') return favs[idx];
+            return currentList[idx];
+        }
+
+        function handleCardClick(ty, idx) {
+            const item = getItemByTypeAndIdx(ty, idx);
+            if (item) {
+                selectWord(item.ur, item.bn, item.pos, item.wj);
+            }
+        }
+
+        function handleFavClick(e, ty, idx) {
+            e.stopPropagation();
+            const item = getItemByTypeAndIdx(ty, idx);
+            if (item) {
+                toggleFav(item.ur);
+            }
+        }
+
+        function te(e, p, ty, idx) {
+            let d = tsX - e.changedTouches[0].clientX, c = p.children[1]; 
+            if (d < -70) { 
+                c.style.transform = 'translateX(100%)'; 
+                setTimeout(() => { 
+                    const item = getItemByTypeAndIdx(ty, idx);
+                    if (item) {
+                        if (ty === 'history') { 
+                            hist = hist.filter(i => i.ur !== item.ur); 
+                            localStorage.setItem('historyDictList', JSON.stringify(hist)); 
+                        } else { 
+                            favs = favs.filter(i => i.ur !== item.ur); 
+                            localStorage.setItem('favDictList', JSON.stringify(favs)); 
+                        }
+                    }
+                    p.remove(); 
+                    showToast("حذف"); 
+                    render(); 
+                }, 250); 
+            } else {
+                c.style.transform = 'translateX(0)'; 
+            }
+        }
+
+        function getPosClass(pos) {
+            if (!pos) return '';
+            if (pos === 'مذکر') return 'pos-m';
+            if (pos === 'مؤنث') return 'pos-f';
+            if (pos === 'مذکر و مؤنث') return 'pos-mf';
+            if (pos === 'صفت') return 'pos-adj';
+            if (pos === 'مصدر') return 'pos-verb';
+            if (pos === 'متعلق فعل') return 'pos-adv';
+            if (pos === 'ضمیر') return 'pos-pron';
+            if (pos === 'حرف') return 'pos-harf';
+            return 'pos-m';
+        }
+
+        // UNIFIED CARD RENDERER: URDU WORD + GRAMMATICAL BADGE + SINGULAR/PLURAL BADGE + FAVORITE ICON + BANGLA MEANING
+        function getCard(i, ty, idx) {
+            if (!i || !i.ur) return '';
+            let isF = favs && favs.some(f => f && f.ur === i.ur);
+            const ext = extractPosAndBn(i.bn, i.pos || POS_MAP[i.ur] || '', i.wj || WJ_MAP[i.ur] || '');
+            const posCls = getPosClass(ext.pos);
+            const posBadge = ext.pos ? `<span class="card-pos ${posCls}">${ext.pos}</span>` : '';
+            let wjBadge = '';
+            if (ext.wj) {
+                const wjCls = ext.wj.startsWith('واحد') ? 'wj-wahid' : 'wj-jama';
+                wjBadge = `<span class="card-wj ${wjCls}">${ext.wj}</span>`;
+            }
+
+            let favIcon = `<button onclick="handleFavClick(event, '${ty}', ${idx})" class="action-btn" aria-label="Favorite">
+                ${isF ? '<svg width="18" height="18" fill="#7A0214" viewBox="0 0 24 24"><path d="M11.645 20.91l-.007-.003-.022-.012a15.247 15.247 0 01-.383-.218 25.18 25.18 0 01-4.244-3.17C4.688 15.36 2.25 12.174 2.25 8.25 2.25 5.322 4.714 3 7.688 3A5.5 5.5 0 0112 5.052 5.5 5.5 0 0116.313 3c2.973 0 5.437 2.322 5.437 5.25 0 3.925-2.438 7.111-4.739 9.256a25.175 25.175 0 01-4.244 3.17 15.247 15.247 0 01-.383.219l-.022.012-.007.004-.003.001a.752.752 0 01-.704 0l-.003-.001z"/></svg>' : '<svg width="18" height="18" stroke="#9ca3af" fill="none" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z"/></svg>'}
+            </button>`;
+
+            let inH = `
+                <div class="card-inner">
+                    <div class="card-bn">${ext.bn}</div>
+                    <div class="card-ur-area">
+                        <div class="card-actions">
+                            ${favIcon}
+                        </div>
+                        ${wjBadge}
+                        ${posBadge}
+                        <div class="card-ur">${i.ur}</div>
+                    </div>
+                </div>
+            `;
+
+            if (ty === 'history' || ty === 'fav') {
+                return `
+                    <div class="swipe-container mb-2.5">
+                        <div class="swipe-delete-label">حذف</div>
+                        <div class="swipe-card-content" ontouchstart="ts(event)" ontouchmove="tm(event,this)" ontouchend="te(event,this.parentNode,'${ty}', ${idx})" onclick="handleCardClick('${ty}', ${idx})">
+                            ${inH}
+                        </div>
+                    </div>
+                `;
+            }
+            return `<div onclick="handleCardClick('${ty}', ${idx})" class="card-box anim" style="cursor: pointer;">${inH}</div>`;
+        }
+
+        function render() {
+            // 1. Single Selected Word View
+            if (cur) {
+                updateCounter(null);
+                resArea.innerHTML = getCard(cur, 'current', 0);
+                loadMoreBtn.style.display = 'none';
+                return;
+            }
+
+            // 2. Search View (STRICT PREFIX ONLY)
+            let searchVal = inDiv.innerText.replace(/[\n\r\u200B]/g,'').trim();
+            if (searchVal) {
+                const results = searchStrictPrefix(searchVal);
+                currentList = results;
+                updateCounter(results.length);
+
+                if (results.length === 0) {
+                    resArea.innerHTML = `
+                        <div class="card-box anim" style="text-align: center; padding: 32px 16px; margin-top: 16px;">
+                            <div class="ur-font" style="font-size: 22px; font-weight: bold; color: #374151; margin-bottom: 4px;">معنی نہیں ملا</div>
+                            <p class="ur-font" style="color: #9ca3af; font-size: 14px;">یہ لفظ فی الحال لغت میں موجود نہیں ہے</p>
+                        </div>
+                    `;
+                    loadMoreBtn.style.display = 'none';
+                    return;
+                }
+
+                const visible = results.slice(0, displayLimit);
+                resArea.innerHTML = visible.map((w, idx) => getCard(w, 'search', idx)).join('');
+                loadMoreBtn.style.display = displayLimit < results.length ? 'block' : 'none';
+                return;
+            }
+
+            // 3. Tab: History
+            if (activeTab === 'hist') {
+                updateCounter(hist.length);
+                if (!hist.length) {
+                    resArea.innerHTML = `<div class="empty-state">کوئی ریکارڈ نہیں</div>`;
+                    loadMoreBtn.style.display = 'none';
+                    return;
+                }
+                resArea.innerHTML = hist.map((h, idx) => getCard(h, 'history', idx)).join('');
+                loadMoreBtn.style.display = 'none';
+                return;
+            }
+
+            // 4. Tab: Favorites
+            if (activeTab === 'favs') {
+                updateCounter(favs.length);
+                if (!favs.length) {
+                    resArea.innerHTML = `<div class="empty-state">کوئی ریکارڈ نہیں</div>`;
+                    loadMoreBtn.style.display = 'none';
+                    return;
+                }
+                resArea.innerHTML = favs.map((f, idx) => getCard(f, 'fav', idx)).join('');
+                loadMoreBtn.style.display = 'none';
+                return;
+            }
+
+            // 5. Tab: All Words (Browse Alphabetically starting from Alif)
+            let filtered = ALL_WORDS;
+            if (selectedAlpha !== 'سب') {
+                const nAlpha = normalizeUrdu(selectedAlpha);
+                filtered = ALL_WORDS.filter(w => normalizeUrdu(w.ur).startsWith(nAlpha));
+            }
+            currentList = filtered;
+            updateCounter(filtered.length);
+
+            if (filtered.length === 0) {
+                if (!ALL_WORDS || ALL_WORDS.length === 0) {
+                    resArea.innerHTML = `
+                        <div class="card-box anim" style="text-align: center; padding: 40px 16px; margin-top: 16px;">
+                            <div class="ur-font" style="font-size: 20px; font-weight: bold; color: #7A0214; margin-bottom: 6px;">الفاظ لوڈ ہو رہے ہیں...</div>
+                            <p style="color: #6b7280; font-size: 14px;">৩২,০০০ শব্দের সম্পূর্ণ অভিধান লোড হচ্ছে, অনুগ্রহ করে অপেক্ষা করুন...</p>
+                        </div>
+                    `;
+                } else {
+                    resArea.innerHTML = `<div class="empty-state">کوئی ریکارڈ نہیں</div>`;
+                }
+                loadMoreBtn.style.display = 'none';
+                return;
+            }
+
+            const visible = filtered.slice(0, displayLimit);
+            resArea.innerHTML = visible.map((w, idx) => getCard(w, 'all', idx)).join('');
+            loadMoreBtn.style.display = displayLimit < filtered.length ? 'block' : 'none';
+        }
+
+        function loadMore() {
+            displayLimit += 50;
+            render();
+        }
+
+        // Infinite Scroll
+        window.addEventListener('scroll', () => {
+            if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight - 350) {
+                if (currentList && displayLimit < currentList.length) {
+                    displayLimit += 40;
+                    render();
+                }
+            }
+        });
+
+        // Initialize and clean up old caches
+        if ('caches' in window) {
+            caches.keys().then(keys => {
+                keys.forEach(k => {
+                    if (k !== 'hubban-lughat-v52') {
+                        caches.delete(k);
+                    }
+                });
+            }).catch(() => {});
+        }
+        
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('./sw.js?v=52').then((reg) => {
+                    reg.update().catch(() => {});
+                }).catch(() => {});
+            });
+        }
+
+        renderAlphaRibbon();
+
+        // Safe Dictionary Data Initialization
+        window.onWordsLoaded = function() {
+            if (window.RAW_WORDS) {
+                applyWordsData(window.RAW_WORDS);
+            }
+        };
+
+        if (window.RAW_WORDS) {
+            applyWordsData(window.RAW_WORDS);
+        } else {
+            render();
+            let pollTries = 0;
+            const poller = setInterval(() => {
+                pollTries++;
+                if (window.RAW_WORDS) {
+                    if (applyWordsData(window.RAW_WORDS)) {
+                        clearInterval(poller);
+                    }
+                }
+                if (pollTries > 100) {
+                    clearInterval(poller);
+                    if (!ALL_WORDS || ALL_WORDS.length === 0) {
+                        fetch('./words.js?v=52')
+                            .then(res => res.text())
+                            .then(code => {
+                                const fn = new Function(code);
+                                fn();
+                                if (window.RAW_WORDS) {
+                                    applyWordsData(window.RAW_WORDS);
+                                }
+                            })
+                            .catch(e => console.error('Fallback fetch error:', e));
+                    }
+                }
+            }, 50);
+        }
+    </script>
+    <script src="words.js?v=52" defer></script>
+</body>
+</html>
