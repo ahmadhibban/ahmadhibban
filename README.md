@@ -17,13 +17,13 @@ All applications are pre-compiled and standalone. Once installed on your Android
 | **Nexhib AI** | Autonomous AI Developer & Universal Computing System with Standalone Embedded Linux & OmniRoute Gateway. | Kotlin, Android SDK, PRoot Linux, Node.js, Python | 📦 **[Download Nexhib.apk](https://github.com/ahmadhibban/ahmadhibban/releases/download/v1.0.0/Nexhib.apk)** |
 | **OpenDroid-OmniRoute** | Autonomous Android AI Agent with Embedded OmniRoute AI Gateway & Native Kalpurush Typography. | Android SDK, Jetpack Compose, Node.js, OmniRoute | 📦 **[Download OpenDroid.apk](https://github.com/ahmadhibban/ahmadhibban/releases/download/v1.0.0/OpenDroid-OmniRoute.apk)** |
 | **My Salah Tracker** | Modern daily prayer tracker with interactive prayer times, calendar analytics, and an Ultra Neumorphic Tasbih. | Kotlin, Jetpack Compose, Material 3 | 📦 **[Download SalahTracker.apk](https://github.com/ahmadhibban/ahmadhibban/releases/download/v1.0.0/My-Salah-Tracker.apk)** |
-| **My Salah Tracker 2.0** | Web & PWA prayer tracking platform featuring a 3D Neumorphic dashboard, dynamic prayer logging, and offline sync. | JavaScript, Alpine.js, PWA | 🌐 **[Open Web App](https://ahmadhibban.github.io/ahmadhibban/My-Salah-Tracker-2.0/)** • 📦 **[Download APK](https://github.com/ahmadhibban/ahmadhibban/releases/download/v1.0.0/My-Salah-Tracker-2.0.apk)** |
+| **My Salah Tracker 2.0** | Web & PWA prayer tracking platform featuring a 3D Neumorphic dashboard, dynamic prayer logging, and offline sync. | JavaScript, Alpine.js, PWA | 🌐 **[Open Web App](https://ahmadhibban.github.io/My-Salah-Tracker-2.0/)** • 📦 **[Download APK](https://github.com/ahmadhibban/ahmadhibban/releases/download/v1.0.0/My-Salah-Tracker-2.0.apk)** |
 | **PDFLNX** | High-performance offline PDF document processing & multi-language OCR (Bengali, Arabic, English, Urdu) text extractor. | Kotlin, Android SDK, Tesseract OCR | 📦 **[Download PDFLNX.apk](https://github.com/ahmadhibban/ahmadhibban/releases/download/v1.0.0/PDFLNX.apk)** |
 | **Python Zero to Hero** | Native Android offline Python 3.12 IDE & interactive Bengali programming mastery platform. | Android SDK, WebKit, Skulpt, Python 3 | 📦 **[Download PythonHero.apk](https://github.com/ahmadhibban/ahmadhibban/releases/download/v1.0.0/PythonHero.apk)** |
-| **StoryLingo** | Bilingual language learning platform featuring 1,000 curated stories across 57 categories with sentence-by-sentence translations. | JavaScript, PWA, Tailwind CSS | 🌐 **[Open Web App](https://ahmadhibban.github.io/ahmadhibban/StoryLingo/)** • 📦 **[Download APK](https://github.com/ahmadhibban/ahmadhibban/releases/download/v1.0.0/StoryLingo.apk)** |
-| **Hibban-Ul-Lughat** | Comprehensive offline Urdu-to-Bengali digital dictionary with 32,000 standard entries, Nastaliq typography, and instant search. | PWA, SQLite, Tailwind CSS | 🌐 **[Open Web App](https://ahmadhibban.github.io/ahmadhibban/Hibban-Ul-Lughat/)** • 📦 **[Download APK](https://github.com/ahmadhibban/ahmadhibban/releases/download/v1.0.0/Hibban-Ul-Lughat.apk)** |
-| **Misbahatu Ahmad** | Digital 3D Aqua Tasbih, Dhikr, and Daily Dua recitation application with Text-to-Speech (TTS) voice assistance. | JavaScript, Android WebView, PWA | 🌐 **[Open Web App](https://ahmadhibban.github.io/ahmadhibban/Misbahatu-Ahmad/)** • 📦 **[Download APK](https://github.com/ahmadhibban/ahmadhibban/releases/download/v1.0.0/Misbahatu-Ahmad.apk)** |
-| **8D Audio Player** | Spatial 8D / 9D / 10D audio streaming music player with background playback and Bluetooth safety protection. | JavaScript, Android WebView, Audio API | 🌐 **[Open Web App](https://ahmadhibban.github.io/ahmadhibban/8D-Audio/)** • 📦 **[Download APK](https://github.com/ahmadhibban/ahmadhibban/releases/download/v1.0.0/8D-Audio.apk)** |
+| **StoryLingo** | Bilingual language learning platform featuring 1,000 curated stories across 57 categories with sentence-by-sentence translations. | JavaScript, PWA, Tailwind CSS | 🌐 **[Open Web App](https://ahmadhibban.github.io/StoryLingo/)** • 📦 **[Download APK](https://github.com/ahmadhibban/ahmadhibban/releases/download/v1.0.0/StoryLingo.apk)** |
+| **Hibban-Ul-Lughat** | Comprehensive offline Urdu-to-Bengali digital dictionary with 32,000 standard entries, Nastaliq typography, and instant search. | PWA, SQLite, Tailwind CSS | 🌐 **[Open Web App](https://ahmadhibban.github.io/Hibban-Ul-Lughat/)** • 📦 **[Download APK](https://github.com/ahmadhibban/ahmadhibban/releases/download/v1.0.0/Hibban-Ul-Lughat.apk)** |
+| **Misbahatu Ahmad** | Digital 3D Aqua Tasbih, Dhikr, and Daily Dua recitation application with Text-to-Speech (TTS) voice assistance. | JavaScript, Android WebView, PWA | 🌐 **[Open Web App](https://ahmadhibban.github.io/Misbahatu-Ahmad/)** • 📦 **[Download APK](https://github.com/ahmadhibban/ahmadhibban/releases/download/v1.0.0/Misbahatu-Ahmad.apk)** |
+| **8D Audio Player** | Spatial 8D / 9D / 10D audio streaming music player with background playback and Bluetooth safety protection. | JavaScript, Android WebView, Audio API | 🌐 **[Open Web App](https://ahmadhibban.github.io/8D-Audio/)** • 📦 **[Download APK](https://github.com/ahmadhibban/ahmadhibban/releases/download/v1.0.0/8D-Audio.apk)** |
 
 ---
 
@@ -31,11 +31,11 @@ All applications are pre-compiled and standalone. Once installed on your Android
 
 You can run these applications directly in your browser without installing any APK:
 
-* 🕌 **[My Salah Tracker 2.0 Web App](https://ahmadhibban.github.io/ahmadhibban/My-Salah-Tracker-2.0/)** — Interactive 3D Neumorphic daily prayer dashboard
-* 📖 **[StoryLingo Web App](https://ahmadhibban.github.io/ahmadhibban/StoryLingo/)** — 1,000 bilingual stories with line-by-line Bengali translations
-* 📚 **[Hibban-Ul-Lughat Web App](https://ahmadhibban.github.io/ahmadhibban/Hibban-Ul-Lughat/)** — 32,000 Urdu-to-Bengali comprehensive dictionary
-* 📿 **[Misbahatu Ahmad Web App](https://ahmadhibban.github.io/ahmadhibban/Misbahatu-Ahmad/)** — Digital 3D Aqua Tasbih & Daily Islamic Azkar / Dua with TTS
-* 🎧 **[8D Audio Player Web App](https://ahmadhibban.github.io/ahmadhibban/8D-Audio/)** — Spatial 8D music player with continuous background playback
+* 🕌 **[My Salah Tracker 2.0 Web App](https://ahmadhibban.github.io/My-Salah-Tracker-2.0/)** — Interactive 3D Neumorphic daily prayer dashboard
+* 📖 **[StoryLingo Web App](https://ahmadhibban.github.io/StoryLingo/)** — 1,000 bilingual stories with line-by-line Bengali translations
+* 📚 **[Hibban-Ul-Lughat Web App](https://ahmadhibban.github.io/Hibban-Ul-Lughat/)** — 32,000 Urdu-to-Bengali comprehensive dictionary
+* 📿 **[Misbahatu Ahmad Web App](https://ahmadhibban.github.io/Misbahatu-Ahmad/)** — Digital 3D Aqua Tasbih & Daily Islamic Azkar / Dua with TTS
+* 🎧 **[8D Audio Player Web App](https://ahmadhibban.github.io/8D-Audio/)** — Spatial 8D music player with continuous background playback
 
 ---
 
@@ -51,8 +51,10 @@ You can run these applications directly in your browser without installing any A
 
 ## 📬 Connect with Me
 
-- 💻 GitHub: [@ahmadhibban](https://github.com/ahmadhibban)
-- 📍 Location: Dhaka, Bangladesh
+- 📱 **Phone / WhatsApp**: [01568630013](tel:01568630013) • [Chat on WhatsApp](https://wa.me/8801568630013)
+- 📧 **Email**: [ahmadhibban@yandex.ru](mailto:ahmadhibban@yandex.ru)
+- 💻 **GitHub**: [@ahmadhibban](https://github.com/ahmadhibban)
+- 📍 **Location**: Dhaka, Bangladesh
 - 🎯 Always open to collaborating on innovative Android, AI, and web projects.
 
 ---
