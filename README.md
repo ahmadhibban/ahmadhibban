@@ -4,7 +4,7 @@
 [![GitHub Stars](https://img.shields.io/github/stars/ahmadhibban?style=flat-square&color=f59e0b)](https://github.com/ahmadhibban)
 
 **Android & Web Developer** based in **Dhaka, Bangladesh**.  
-I craft intuitive, privacy-focused native Android applications, offline utility engines, and high-performance Progressive Web Applications (PWA).
+I craft intuitive, privacy-focused native Android applications, offline utility engines, autonomous AI tools, and high-performance Progressive Web Applications (PWA).
 
 ---
 
@@ -12,9 +12,12 @@ I craft intuitive, privacy-focused native Android applications, offline utility 
 
 | Project | Description | Tech Stack | Links |
 | :--- | :--- | :--- | :--- |
+| **[Nexhib AI](https://github.com/ahmadhibban/Nexhib-Ai)** | Autonomous AI Developer & Universal Computing System with Standalone Embedded Linux & OmniRoute Gateway. | Kotlin, Android SDK, PRoot Linux, Node.js, Python | [Repo](https://github.com/ahmadhibban/Nexhib-Ai) • [Releases](https://github.com/ahmadhibban/Nexhib-Ai/releases) |
+| **[OpenDroid-OmniRoute](https://github.com/ahmadhibban/OpenDroid-OmniRoute)** | Autonomous Android AI Agent with Embedded OmniRoute AI Gateway & Native Kalpurush Typography. | Android SDK, Jetpack Compose, Node.js, OmniRoute | [Repo](https://github.com/ahmadhibban/OpenDroid-OmniRoute) • [Releases](https://github.com/ahmadhibban/OpenDroid-OmniRoute/releases) |
 | **[My Salah Tracker](https://github.com/ahmadhibban/My-Salah-Tracker)** | Modern daily prayer tracker with interactive prayer times, calendar analytics, and an Ultra Neumorphic Tasbih. | Kotlin, Jetpack Compose, Material 3 | [Repo](https://github.com/ahmadhibban/My-Salah-Tracker) • [Releases](https://github.com/ahmadhibban/My-Salah-Tracker/releases) |
 | **[My Salah Tracker 2.0](https://github.com/ahmadhibban/My-Salah-Tracker-2.0)** | Web & PWA prayer tracking platform featuring a 3D Neumorphic dashboard, dynamic prayer logging, and offline sync. | JavaScript, Alpine.js, PWA | [Repo](https://github.com/ahmadhibban/My-Salah-Tracker-2.0) • [Live App](https://ahmadhibban.github.io/My-Salah-Tracker-2.0/) |
 | **[PDFLNX](https://github.com/ahmadhibban/PDFLNX)** | High-performance offline PDF document processing & multi-language OCR (Bengali, Arabic, English, Urdu) text extractor. | Kotlin, Android SDK, Tesseract OCR | [Repo](https://github.com/ahmadhibban/PDFLNX) • [Releases](https://github.com/ahmadhibban/PDFLNX/releases) |
+| **[Python Zero to Hero](https://github.com/ahmadhibban/Python-Zero-to-Hero)** | Native Android offline Python 3.12 IDE & interactive Bengali programming mastery platform. | Android SDK, WebKit, Skulpt, Python 3 | [Repo](https://github.com/ahmadhibban/Python-Zero-to-Hero) • [Releases](https://github.com/ahmadhibban/Python-Zero-to-Hero/releases) |
 | **[StoryLingo](https://github.com/ahmadhibban/StoryLingo)** | Bilingual language learning platform featuring 1,000 curated stories across 57 categories with sentence-by-sentence translations. | JavaScript, PWA, Tailwind CSS | [Repo](https://github.com/ahmadhibban/StoryLingo) • [Live App](https://ahmadhibban.github.io/StoryLingo/) |
 | **[Hibban-Ul-Lughat](https://github.com/ahmadhibban/Hibban-Ul-Lughat)** | Comprehensive offline Urdu-to-Bengali digital dictionary with 32,000 standard entries, Nastaliq typography, and instant search. | PWA, SQLite, Tailwind CSS | [Repo](https://github.com/ahmadhibban/Hibban-Ul-Lughat) • [Live App](https://ahmadhibban.github.io/Hibban-Ul-Lughat/) |
 | **[Misbahatu Ahmad](https://github.com/ahmadhibban/Misbahatu-Ahmad)** | Digital 3D Aqua Tasbih, Dhikr, and Daily Dua recitation application with Text-to-Speech (TTS) voice assistance. | JavaScript, Android WebView, PWA | [Repo](https://github.com/ahmadhibban/Misbahatu-Ahmad) • [Live App](https://ahmadhibban.github.io/Misbahatu-Ahmad/) |
@@ -24,7 +27,7 @@ I craft intuitive, privacy-focused native Android applications, offline utility 
 
 ## 🌐 Live Web Applications (Instant Browser Access)
 
-All web applications are deployed live via **GitHub Pages** with offline caching (PWA). You can run them directly in your web browser right now without downloading or installing any APK:
+All web applications are built with offline caching (PWA). You can run them directly in your web browser:
 
 * 🕌 **[My Salah Tracker 2.0 Web App](https://ahmadhibban.github.io/My-Salah-Tracker-2.0/)** — Interactive 3D Neumorphic daily prayer dashboard
 * 📖 **[StoryLingo Web App](https://ahmadhibban.github.io/StoryLingo/)** — 1,000 bilingual stories with line-by-line Bengali translations
@@ -37,9 +40,10 @@ All web applications are deployed live via **GitHub Pages** with offline caching
 ## 🛠️ Tech Stack & Skills
 
 - **Mobile Development**: Android SDK, Kotlin, Java, Jetpack Compose, Material Design 3, Gradle, WebView Bridges
+- **Autonomous & AI Systems**: PRoot Linux Virtualization, Node.js v26 Runtime, OmniRoute Gateway, Agent Workflows
 - **Web Technologies**: Modern JavaScript (ES6+), HTML5, CSS3, Tailwind CSS, Alpine.js, Progressive Web Apps (PWA)
-- **Engines & Libraries**: Tesseract OCR Engine, SQLite, Service Workers, Audio Streaming APIs, Web Crawlers
-- **DevOps & Workflows**: Git, GitHub Actions (CI/CD Automated Builds), GitHub Pages, Linux / Bash
+- **Engines & Libraries**: Tesseract OCR Engine, SQLite, Skulpt Python Engine, Service Workers, Audio Streaming APIs
+- **DevOps & Workflows**: Git, GitHub Actions (CI/CD Automated Builds), Linux / Bash
 
 ---
 
@@ -47,7 +51,7 @@ All web applications are deployed live via **GitHub Pages** with offline caching
 
 - 💻 GitHub: [@ahmadhibban](https://github.com/ahmadhibban)
 - 📍 Location: Dhaka, Bangladesh
-- 🎯 Always open to collaborating on open-source Android and web projects.
+- 🎯 Always open to collaborating on innovative Android, AI, and web projects.
 
 ---
 *Created with dedication by Ahmad Hibban.*
