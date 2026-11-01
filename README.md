@@ -8,26 +8,28 @@ I craft intuitive, privacy-focused native Android applications, offline utility 
 
 ---
 
-## 🚀 Featured Projects
+## 🚀 Featured Applications & Direct Downloads
 
-| Project | Description | Tech Stack | Links |
+All applications are pre-compiled and standalone. Once installed on your Android device, they run 100% offline forever without requiring third-party tools or dependencies.
+
+| Application | Description | Tech Stack | Access & Download Links |
 | :--- | :--- | :--- | :--- |
-| **[Nexhib AI](https://github.com/ahmadhibban/Nexhib-Ai)** | Autonomous AI Developer & Universal Computing System with Standalone Embedded Linux & OmniRoute Gateway. | Kotlin, Android SDK, PRoot Linux, Node.js, Python | [Repo](https://github.com/ahmadhibban/Nexhib-Ai) • [Releases](https://github.com/ahmadhibban/Nexhib-Ai/releases) |
-| **[OpenDroid-OmniRoute](https://github.com/ahmadhibban/OpenDroid-OmniRoute)** | Autonomous Android AI Agent with Embedded OmniRoute AI Gateway & Native Kalpurush Typography. | Android SDK, Jetpack Compose, Node.js, OmniRoute | [Repo](https://github.com/ahmadhibban/OpenDroid-OmniRoute) • [Releases](https://github.com/ahmadhibban/OpenDroid-OmniRoute/releases) |
-| **[My Salah Tracker](https://github.com/ahmadhibban/My-Salah-Tracker)** | Modern daily prayer tracker with interactive prayer times, calendar analytics, and an Ultra Neumorphic Tasbih. | Kotlin, Jetpack Compose, Material 3 | [Repo](https://github.com/ahmadhibban/My-Salah-Tracker) • [Releases](https://github.com/ahmadhibban/My-Salah-Tracker/releases) |
-| **[My Salah Tracker 2.0](https://github.com/ahmadhibban/My-Salah-Tracker-2.0)** | Web & PWA prayer tracking platform featuring a 3D Neumorphic dashboard, dynamic prayer logging, and offline sync. | JavaScript, Alpine.js, PWA | [Repo](https://github.com/ahmadhibban/My-Salah-Tracker-2.0) • [Live App](https://ahmadhibban.github.io/My-Salah-Tracker-2.0/) |
-| **[PDFLNX](https://github.com/ahmadhibban/PDFLNX)** | High-performance offline PDF document processing & multi-language OCR (Bengali, Arabic, English, Urdu) text extractor. | Kotlin, Android SDK, Tesseract OCR | [Repo](https://github.com/ahmadhibban/PDFLNX) • [Releases](https://github.com/ahmadhibban/PDFLNX/releases) |
-| **[Python Zero to Hero](https://github.com/ahmadhibban/Python-Zero-to-Hero)** | Native Android offline Python 3.12 IDE & interactive Bengali programming mastery platform. | Android SDK, WebKit, Skulpt, Python 3 | [Repo](https://github.com/ahmadhibban/Python-Zero-to-Hero) • [Releases](https://github.com/ahmadhibban/Python-Zero-to-Hero/releases) |
-| **[StoryLingo](https://github.com/ahmadhibban/StoryLingo)** | Bilingual language learning platform featuring 1,000 curated stories across 57 categories with sentence-by-sentence translations. | JavaScript, PWA, Tailwind CSS | [Repo](https://github.com/ahmadhibban/StoryLingo) • [Live App](https://ahmadhibban.github.io/StoryLingo/) |
-| **[Hibban-Ul-Lughat](https://github.com/ahmadhibban/Hibban-Ul-Lughat)** | Comprehensive offline Urdu-to-Bengali digital dictionary with 32,000 standard entries, Nastaliq typography, and instant search. | PWA, SQLite, Tailwind CSS | [Repo](https://github.com/ahmadhibban/Hibban-Ul-Lughat) • [Live App](https://ahmadhibban.github.io/Hibban-Ul-Lughat/) |
-| **[Misbahatu Ahmad](https://github.com/ahmadhibban/Misbahatu-Ahmad)** | Digital 3D Aqua Tasbih, Dhikr, and Daily Dua recitation application with Text-to-Speech (TTS) voice assistance. | JavaScript, Android WebView, PWA | [Repo](https://github.com/ahmadhibban/Misbahatu-Ahmad) • [Live App](https://ahmadhibban.github.io/Misbahatu-Ahmad/) |
-| **[8D Audio Player](https://github.com/ahmadhibban/8D-Audio)** | Spatial 8D / 9D / 10D audio streaming music player with background playback and Bluetooth safety protection. | JavaScript, Android WebView, Audio API | [Repo](https://github.com/ahmadhibban/8D-Audio) • [Live App](https://ahmadhibban.github.io/8D-Audio/) |
+| **[Nexhib AI](https://github.com/ahmadhibban/Nexhib-Ai)** | Autonomous AI Developer & Universal Computing System with Standalone Embedded Linux & OmniRoute Gateway. | Kotlin, Android SDK, PRoot Linux, Node.js, Python | 📦 [Download Nexhib.apk](https://github.com/ahmadhibban/Nexhib-Ai/releases/download/v3.2.0/Nexhib.apk) |
+| **[OpenDroid-OmniRoute](https://github.com/ahmadhibban/OpenDroid-OmniRoute)** | Autonomous Android AI Agent with Embedded OmniRoute AI Gateway & Native Kalpurush Typography. | Android SDK, Jetpack Compose, Node.js, OmniRoute | 📦 [Download OpenDroid.apk](https://github.com/ahmadhibban/OpenDroid-OmniRoute/releases/download/v1.0.8/OpenDroid-OmniRoute.apk) |
+| **[My Salah Tracker](https://github.com/ahmadhibban/My-Salah-Tracker)** | Modern daily prayer tracker with interactive prayer times, calendar analytics, and an Ultra Neumorphic Tasbih. | Kotlin, Jetpack Compose, Material 3 | 📦 [Download SalahTracker.apk](https://github.com/ahmadhibban/My-Salah-Tracker/releases/download/v1.0.0/My-Salah-Tracker.apk) |
+| **[My Salah Tracker 2.0](https://github.com/ahmadhibban/My-Salah-Tracker-2.0)** | Web & PWA prayer tracking platform featuring a 3D Neumorphic dashboard, dynamic prayer logging, and offline sync. | JavaScript, Alpine.js, PWA | 🌐 [Open Web App](https://ahmadhibban.github.io/My-Salah-Tracker-2.0/) • 📦 [Download APK](https://github.com/ahmadhibban/My-Salah-Tracker-2.0/releases/download/v1.0.0/My-Salah-Tracker-2.0.apk) |
+| **[PDFLNX](https://github.com/ahmadhibban/PDFLNX)** | High-performance offline PDF document processing & multi-language OCR (Bengali, Arabic, English, Urdu) text extractor. | Kotlin, Android SDK, Tesseract OCR | 📦 [Download PDFLNX.apk](https://github.com/ahmadhibban/PDFLNX/releases/download/v1.0.0/PDFLNX.apk) |
+| **[Python Zero to Hero](https://github.com/ahmadhibban/Python-Zero-to-Hero)** | Native Android offline Python 3.12 IDE & interactive Bengali programming mastery platform. | Android SDK, WebKit, Skulpt, Python 3 | 📦 [Download PythonHero.apk](https://github.com/ahmadhibban/Python-Zero-to-Hero/releases/download/v1.4.1/PythonHero.apk) |
+| **[StoryLingo](https://github.com/ahmadhibban/StoryLingo)** | Bilingual language learning platform featuring 1,000 curated stories across 57 categories with sentence-by-sentence translations. | JavaScript, PWA, Tailwind CSS | 🌐 [Open Web App](https://ahmadhibban.github.io/StoryLingo/) • 📦 [Download APK](https://github.com/ahmadhibban/StoryLingo/releases/download/v2.1.0/StoryLingo.apk) |
+| **[Hibban-Ul-Lughat](https://github.com/ahmadhibban/Hibban-Ul-Lughat)** | Comprehensive offline Urdu-to-Bengali digital dictionary with 32,000 standard entries, Nastaliq typography, and instant search. | PWA, SQLite, Tailwind CSS | 🌐 [Open Web App](https://ahmadhibban.github.io/Hibban-Ul-Lughat/) • 📦 [Download APK](https://github.com/ahmadhibban/Hibban-Ul-Lughat/releases/download/v1.0.0/Hibban-Ul-Lughat.apk) |
+| **[Misbahatu Ahmad](https://github.com/ahmadhibban/Misbahatu-Ahmad)** | Digital 3D Aqua Tasbih, Dhikr, and Daily Dua recitation application with Text-to-Speech (TTS) voice assistance. | JavaScript, Android WebView, PWA | 🌐 [Open Web App](https://ahmadhibban.github.io/Misbahatu-Ahmad/) • 📦 [Download APK](https://github.com/ahmadhibban/Misbahatu-Ahmad/releases/download/v1.0.0/Misbahatu-Ahmad.apk) |
+| **[8D Audio Player](https://github.com/ahmadhibban/8D-Audio)** | Spatial 8D / 9D / 10D audio streaming music player with background playback and Bluetooth safety protection. | JavaScript, Android WebView, Audio API | 🌐 [Open Web App](https://ahmadhibban.github.io/8D-Audio/) • 📦 [Download APK](https://github.com/ahmadhibban/8D-Audio/releases/download/v1.0.0/8D-Audio.apk) |
 
 ---
 
-## 🌐 Live Web Applications (Instant Browser Access)
+## 🌐 Instant Web Browser Access (Direct Website Links)
 
-All web applications are built with offline caching (PWA). You can run them directly in your web browser:
+You can run these applications directly in your browser without installing any APK:
 
 * 🕌 **[My Salah Tracker 2.0 Web App](https://ahmadhibban.github.io/My-Salah-Tracker-2.0/)** — Interactive 3D Neumorphic daily prayer dashboard
 * 📖 **[StoryLingo Web App](https://ahmadhibban.github.io/StoryLingo/)** — 1,000 bilingual stories with line-by-line Bengali translations
